@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-body text-ink bg-hero-gradient min-h-screen;
+  }
+
+  h1, h2, h3 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-body font-600 transition-all duration-300 text-sm tracking-wide;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-dark hover:-translate-y-0.5 shadow-md hover:shadow-card;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white hover:-translate-y-0.5;
+  }
+
+  .section-title {
+    @apply font-display text-3xl md:text-4xl text-ink font-bold mb-3;
+  }
+
+  .section-subtitle {
+    @apply text-ink-muted text-base md:text-lg mb-10;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-card p-6 transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1.5 bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full;
+  }
+}
+
+@layer utilities {
+  .font-600 {
+    font-weight: 600;
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #2C7A6F, #1E5C52);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-400 { animation-delay: 400ms; }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #e6f2ed; }
+::-webkit-scrollbar-thumb { background: #2C7A6F; border-radius: 3px; }
+
+/* Smooth section transitions */
+section {
+  scroll-margin-top: 88px;
+}
