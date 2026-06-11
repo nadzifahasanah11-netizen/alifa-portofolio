@@ -3,7 +3,6 @@ import { createRouter, createWebHistory } from 'vue-router'
 import App from './App.vue'
 import './style.css'
 
-// Route definitions
 import HomeView from './views/HomeView.vue'
 
 const routes = [

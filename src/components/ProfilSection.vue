@@ -122,8 +122,8 @@ const skills = [
 ]
 
 const education = [
-  { year: '2024 – Sekarang', institution: 'Universitas Negeri Semarang', major: 'Program PPG Prajabatan – Pendidikan Informatika' },
-  { year: '2019 – 2023', institution: 'Universitas Diponegoro', major: 'S1 Ilmu Komputer / Teknik Informatika' },
-  { year: '2016 – 2019', institution: 'SMA Negeri 1 Kudus', major: 'IPA' },
+  { year: '2024 – Sekarang', institution: 'Universitas Kristen Satya Wacana', major: 'Program PPG Prajabatan – Pendidikan Informatika' },
+  { year: '2019 – 2023', institution: 'Universitas Negeri Semarang', major: 'S1 Pendidikan Teknik Informatika & Komputer' },
+  { year: '2016 – 2019', institution: 'SMK Muhammadiyah Kudus', major: 'Teknik Komputer & Jaringan' },
 ]
 </script>

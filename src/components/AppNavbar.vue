@@ -87,7 +87,7 @@ const navLinks = [
   { href: '#profil', label: 'Profil' },
   { href: '#refleksi', label: 'Refleksi' },
   { href: '#model-guru', label: 'Model Guru' },
-  { href: '#lampiran', label: 'Lampiran' },
+  { href: '#lampiran', label: 'Artefak' },
 ]
 
 const handleScroll = () => {
