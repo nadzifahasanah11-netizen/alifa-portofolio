@@ -10,99 +10,84 @@
         </div>
         <h2 class="section-title">Model Guru Ideal</h2>
         <p class="section-subtitle max-w-xl mx-auto">
-          Gambaran guru ideal yang saya jadikan inspirasi dan panduan dalam perjalanan profesional saya.
+          Gambaran guru yang saya cita-citakan dan sedang saya bangun melalui perjalanan PPG ini.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-
-        <!-- Left: Qualities -->
-        <div class="space-y-4">
-          <div
-            v-for="(quality, i) in qualities"
-            :key="i"
-            class="flex items-start gap-4 p-5 rounded-2xl bg-white shadow-sm border border-primary/8 hover:border-primary/20 hover:shadow-card transition-all duration-300 group"
-          >
-            <div class="w-12 h-12 rounded-xl bg-primary/10 group-hover:bg-primary/15 flex items-center justify-center flex-shrink-0 transition-colors">
-              <i :class="['fas', quality.icon, 'text-primary text-lg']"></i>
-            </div>
-            <div>
-              <h3 class="font-body text-base font-semibold text-ink mb-1">{{ quality.title }}</h3>
-              <p class="font-body text-sm text-ink-muted leading-relaxed">{{ quality.desc }}</p>
-            </div>
-          </div>
+      <!-- Misi Profesional -->
+      <div class="max-w-3xl mx-auto text-center mb-20">
+        <div class="inline-flex items-center gap-2 text-[#4A7043] bg-[#E8F1E5] px-5 py-2 rounded-full text-sm font-medium mb-6">
+          <span class="text-xl">🌱</span> Misi Profesional
         </div>
+        <p class="text-lg leading-relaxed text-gray-700">
+          Menjadi pendidik yang melek teknologi, adaptif terhadap perkembangan zaman dan karakter peserta didik, 
+          serta terus belajar, berefleksi, dan berbenah demi menghadirkan pembelajaran yang bermakna, relevan, 
+          dan berkelanjutan.
+        </p>
+      </div>
 
-        <!-- Right: Philosophy Card -->
-        <div class="space-y-6">
-          <div class="card relative overflow-hidden">
-            <!-- Decorative bg -->
-            <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -translate-x-4 -translate-y-4"></div>
-            <div class="relative">
-              <div class="badge mb-4">Filosofi Mengajar</div>
-              <h3 class="font-display text-2xl font-bold text-ink mb-4">
-                "Guru sebagai <span class="text-gradient">Fasilitator</span> Belajar"
-              </h3>
-              <p class="font-body text-sm text-ink-muted leading-relaxed mb-4">
-                Saya percaya bahwa tugas utama guru bukan sekadar mentransfer pengetahuan,
-                tetapi menciptakan lingkungan di mana siswa dapat menemukan dan mengonstruksi
-                pengetahuannya sendiri melalui pengalaman yang bermakna.
-              </p>
-              <p class="font-body text-sm text-ink-muted leading-relaxed">
-                Dengan pendekatan <strong class="text-ink">student-centered learning</strong>, 
-                setiap siswa dipandang sebagai individu unik dengan potensi yang luar biasa —
-                tugas kita adalah menyalakan percikan semangat belajar itu.
-              </p>
-            </div>
-          </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
-          <!-- Model Inspirasi -->
-          <div class="card">
-            <h3 class="font-body text-base font-semibold text-ink mb-4 flex items-center gap-2">
-              <i class="fas fa-star text-primary text-sm"></i>
-              Tokoh Pendidik yang Menginspirasi
-            </h3>
-            <div class="space-y-3">
-              <div
-                v-for="tokoh in tokohInspirasi"
-                :key="tokoh.name"
-                class="flex items-center gap-3 p-3 rounded-xl bg-surface hover:bg-surface-dark transition-colors"
-              >
-                <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white text-xs font-bold font-display flex-shrink-0">
-                  {{ tokoh.name.charAt(0) }}
+        <!-- Left: Kompetensi yang Dibangun -->
+        <div>
+          <h3 class="font-display text-3xl font-bold text-[#2C3E2F] mb-8 flex items-center gap-3">
+            <span class="text-3xl">🎯</span> Kompetensi yang Dibangun
+          </h3>
+          
+          <div class="space-y-6">
+            <div v-for="(komp, i) in kompetensiBaru" :key="i" 
+                 class="card p-6 hover:shadow-card transition-all group">
+              <div class="flex gap-5">
+                <div class="w-10 h-10 rounded-2xl bg-[#E8F1E5] flex items-center justify-center text-2xl flex-shrink-0">
+                  {{ komp.emoji }}
                 </div>
-                <div>
-                  <p class="font-body text-sm font-semibold text-ink">{{ tokoh.name }}</p>
-                  <p class="font-body text-xs text-ink-light">{{ tokoh.desc }}</p>
+                <div class="flex-1">
+                  <h4 class="font-semibold text-[#2C3E2F] mb-2 group-hover:text-[#4A7043] transition-colors">
+                    {{ komp.title }}
+                  </h4>
+                  <p class="text-gray-600 text-[15px] leading-relaxed">
+                    {{ komp.desc }}
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-      </div>
+        <!-- Right: Nilai Utama + Filosofi -->
+        <div class="space-y-8">
 
-      <!-- Kompetensi Grid -->
-      <div>
-        <h3 class="font-display text-2xl font-bold text-ink text-center mb-8">
-          4 Kompetensi Guru Profesional
-        </h3>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          <div
-            v-for="komp in kompetensi"
-            :key="komp.title"
-            class="card text-center group hover:bg-primary hover:text-white transition-all duration-300"
-          >
-            <div class="w-14 h-14 rounded-2xl bg-primary/10 group-hover:bg-white/10 flex items-center justify-center mx-auto mb-4 transition-colors">
-              <i :class="['fas', komp.icon, 'text-primary text-xl group-hover:text-white transition-colors']"></i>
+          <!-- Nilai Utama -->
+          <div class="card p-8">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="text-3xl">✨</span>
+              <h3 class="font-display text-2xl font-bold text-[#2C3E2F]">Nilai Utama</h3>
             </div>
-            <h4 class="font-body text-sm font-bold text-ink group-hover:text-white mb-2 transition-colors">
-              {{ komp.title }}
-            </h4>
-            <p class="font-body text-xs text-ink-muted group-hover:text-white/75 leading-relaxed transition-colors">
-              {{ komp.desc }}
-            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div v-for="(nilai, i) in nilaiUtama" :key="i" 
+                   class="flex items-center gap-3 bg-[#F8FAF6] px-5 py-4 rounded-2xl">
+                <span class="text-[#4A7043] text-xl">→</span>
+                <span class="font-medium text-[#2C3E2F]">{{ nilai }}</span>
+              </div>
+            </div>
           </div>
+
+          <!-- Filosofi Mengajar -->
+          <div class="card relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-40 h-40 bg-[#A8C4A0]/10 rounded-full -translate-x-6 -translate-y-6"></div>
+            <div class="relative">
+              <div class="badge mb-4">Filosofi Mengajar</div>
+              <h3 class="font-display text-2xl font-bold text-ink mb-5">
+                "Guru sebagai <span class="text-[#4A7043]">Fasilitator</span> Belajar"
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                Saya percaya bahwa tugas utama guru adalah menciptakan lingkungan belajar yang memberdayakan siswa 
+                untuk menemukan dan membangun pengetahuan mereka sendiri. Melalui pendekatan <strong>student-centered</strong>, 
+                saya berusaha menyalakan semangat belajar dan berpikir kritis pada setiap peserta didik.
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -111,55 +96,77 @@
 </template>
 
 <script setup>
-const qualities = [
+const kompetensiBaru = [
   {
-    icon: 'fa-heart',
-    title: 'Empati & Kepedulian',
-    desc: 'Memahami kondisi dan kebutuhan setiap siswa secara individual untuk menciptakan hubungan yang autentik dan suportif.'
+    emoji: "💻",
+    title: "Literasi Teknologi Pendidikan",
+    desc: "Mampu memanfaatkan teknologi digital secara tepat guna untuk mendukung proses pembelajaran, mulai dari perencanaan, pelaksanaan, hingga evaluasi, dengan memperhatikan etika dan keamanan digital."
   },
   {
-    icon: 'fa-lightbulb',
-    title: 'Inovatif & Kreatif',
-    desc: 'Terus mengembangkan metode dan media pembelajaran yang menarik, relevan, dan sesuai perkembangan zaman digital.'
+    emoji: "🔄",
+    title: "Desain Pembelajaran Adaptif",
+    desc: "Menyusun pembelajaran yang fleksibel, kontekstual, dan berpihak pada peserta didik sesuai kebutuhan, karakter, serta dinamika perkembangan zaman."
   },
   {
-    icon: 'fa-sync-alt',
-    title: 'Reflektif & Adaptif',
-    desc: 'Selalu merefleksikan praktik mengajar dan beradaptasi berdasarkan kebutuhan siswa serta perkembangan pendidikan.'
+    emoji: "🧠",
+    title: "Pemahaman Karakter & Perkembangan Peserta Didik",
+    desc: "Memahami latar belakang, minat, gaya belajar, dan perkembangan sosial-emosional siswa sebagai dasar pembelajaran yang inklusif."
   },
   {
-    icon: 'fa-users',
-    title: 'Kolaboratif',
-    desc: 'Membangun kerjasama yang baik dengan sesama guru, orang tua, dan komunitas untuk mendukung perkembangan siswa secara holistik.'
+    emoji: "🚀",
+    title: "Integrasi Teknologi & HOTS",
+    desc: "Mengintegrasikan teknologi untuk mendorong berpikir kritis, kreatif, kolaboratif, dan reflektif melalui pembelajaran yang relevan dengan kehidupan nyata."
   },
+  {
+    emoji: "📝",
+    title: "Refleksi & Pengembangan Diri Berkelanjutan",
+    desc: "Melakukan refleksi rutin, terbuka terhadap umpan balik, dan aktif mengembangkan kompetensi melalui pelatihan dan komunitas belajar."
+  },
+  {
+    emoji: "⚖️",
+    title: "Etika & Tanggung Jawab Digital",
+    desc: "Menunjukkan sikap profesional dalam pemanfaatan teknologi dengan menjunjung etika, perlindungan data, dan pembentukan karakter digital siswa."
+  }
 ]
 
-const tokohInspirasi = [
-  { name: 'Ki Hajar Dewantara', desc: 'Ing ngarsa sung tuladha, ing madya mangun karsa' },
-  { name: 'Paulo Freire', desc: 'Pendidikan sebagai praktik kebebasan' },
-  { name: 'John Dewey', desc: 'Learning by doing — belajar melalui pengalaman' },
-]
-
-const kompetensi = [
-  {
-    icon: 'fa-book',
-    title: 'Pedagogik',
-    desc: 'Memahami dan menerapkan teori pembelajaran yang berpusat pada siswa.'
-  },
-  {
-    icon: 'fa-brain',
-    title: 'Profesional',
-    desc: 'Menguasai materi Informatika secara mendalam dan berkelanjutan.'
-  },
-  {
-    icon: 'fa-user-circle',
-    title: 'Kepribadian',
-    desc: 'Menjadi teladan dalam sikap, etika, dan karakter bagi siswa.'
-  },
-  {
-    icon: 'fa-network-wired',
-    title: 'Sosial',
-    desc: 'Berkomunikasi efektif dengan seluruh pemangku kepentingan pendidikan.'
-  },
+const nilaiUtama = [
+  "Belajar Sepanjang Hayat",
+  "Adaptif",
+  "Reflektif",
+  "Berpihak pada Peserta Didik",
+  "Berorientasi Masa Depan"
 ]
 </script>
+
+<style scoped>
+/* Jika belum ada style card & badge, tambahkan ini */
+.card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(74, 112, 67, 0.08);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(74, 112, 67, 0.12);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #E8F1E5;
+  color: #4A7043;
+  font-size: 0.85rem;
+  padding: 4px 14px;
+  border-radius: 9999px;
+  font-weight: 500;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.75rem;
+  color: #2C3E2F;
+}
+</style>
