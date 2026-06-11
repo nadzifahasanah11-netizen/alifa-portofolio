@@ -248,7 +248,7 @@ import { ref, computed } from 'vue'
 const categories = [
   'Semua',
   'Perangkat Ajar',
-  'Asesmen',
+  'Analisis',
   'Siklus',
   'Lampiran 7 & 8',
   'Karya Siswa'
@@ -293,6 +293,46 @@ const docs = [
     type: 'MP4',
     fileUrl: '/files/video-scratch.mp4',
     icon: 'fa-video',
+    bgClass: 'bg-indigo-50',
+    iconColor: 'text-indigo-500',
+    kategori: 'Perangkat Ajar'
+  },
+  {
+    title: 'Materi LAN dan Jaringan komputer',
+    desc: 'Media pembelajaran',
+    type: 'PDF',
+    fileUrl: '/files/LAN dan Internet.pdf',
+    icon: 'fa-pdf',
+    bgClass: 'bg-indigo-50',
+    iconColor: 'text-indigo-500',
+    kategori: 'Perangkat Ajar'
+  },
+  {
+    title: 'HAKi, Pemanfaatan AI, & Profesi',
+    desc: 'Media pembelajaran',
+    type: 'PDF',
+    fileUrl: '/files/HAKI, PEMANFAATAN AI, Profesi.pdf',
+    icon: 'fa-pdf',
+    bgClass: 'bg-indigo-50',
+    iconColor: 'text-indigo-500',
+    kategori: 'Perangkat Ajar'
+  },
+  {
+    title: 'Cyber Security',
+    desc: 'Media pembelajaran',
+    type: 'PDF',
+    fileUrl: '/files/Cyber Security.pdf',
+    icon: 'fa-pdf',
+    bgClass: 'bg-indigo-50',
+    iconColor: 'text-indigo-500',
+    kategori: 'Perangkat Ajar'
+  },
+  {
+    title: 'Autentifikasi 2 Faktor',
+    desc: 'Media pembelajaran',
+    type: 'PDF',
+    fileUrl: '/files/2FA.pdf',
+    icon: 'fa-pdf',
     bgClass: 'bg-indigo-50',
     iconColor: 'text-indigo-500',
     kategori: 'Perangkat Ajar'
