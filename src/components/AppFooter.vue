@@ -26,5 +26,5 @@
 </template>
 
 <script setup>
-const footerLinks = ['Beranda', 'Profil', 'Refleksi', 'Model Guru', 'Lampiran']
+const footerLinks = ['Beranda', 'Profil', 'refleksi', 'Model Guru', 'lampiran']
 </script>

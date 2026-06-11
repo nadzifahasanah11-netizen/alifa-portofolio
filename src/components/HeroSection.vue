@@ -12,7 +12,7 @@
           <!-- Badge -->
           <div class="badge w-fit">
             <span class="w-2 h-2 rounded-full bg-primary animate-pulse inline-block"></span>
-            PPG Mahasiswa • Universitas Negeri Semarang
+            PPG Mahasiswa •  Universitas Kristen Satya Wacana
           </div>
 
           <!-- Heading -->
@@ -110,7 +110,7 @@
 const stats = [
   { value: 'X', label: 'Kelas Ajar' },
   { value: 'PPG', label: 'Program' },
-  { value: 'UNNES', label: 'Universitas' },
+  { value: 'UKSW', label: 'Universitas' },
 ]
 
 const handleImgError = (e) => {
